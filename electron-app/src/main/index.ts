@@ -5,9 +5,13 @@ import icon from '../../resources/icon.png?asset'
 import axios from 'axios'
 
 //Fetch product data
-ipcMain.handle('fetchProduct', async () => {
+ipcMain.handle('fetchProduct', async (_, searchTerm: string) => {
   try {
-    const response = await axios.get('http://localhost:3000/api/products')
+    const response = await axios.get('http://localhost:3000/api/products', {
+      params: {
+        search: searchTerm
+      }
+    })
     return response.data
   } catch (error) {
     throw error
