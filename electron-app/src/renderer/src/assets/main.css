@@ -5,14 +5,31 @@ body {
   background-image: url('./wavy-lines.svg');
   background-size: cover;
   user-select: none;
-  height: 100%;
-}
-#root {
-  width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
+
+#sidenav {
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1rem;
+}
+#sidenav h2 {
+  margin-bottom: 1rem;
+}
+#sidenav .path {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+}
+
 .app-container {
   width: 100%;
   min-height: 100vh;
@@ -21,6 +38,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .header {
   display: flex;
   flex-direction: row;
@@ -29,11 +47,18 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .header__input {
-  flex-basis: 50%;
+  flex: 1;
   padding: 0.5rem;
+  margin-left: 2rem;
 }
+
 .header__button {
+}
+
+.table-container {
+  flex-grow: 1;
 }
 
 code {

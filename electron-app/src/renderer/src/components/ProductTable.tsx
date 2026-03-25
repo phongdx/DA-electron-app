@@ -38,7 +38,7 @@ const ProductTable = ({ items }: Props) => {
         })
     : []
   return (
-    <div>
+    <div className="table-container">
       <DataGrid
         rows={items}
         columns={columns}
