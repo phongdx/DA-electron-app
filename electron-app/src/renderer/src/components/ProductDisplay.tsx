@@ -19,7 +19,7 @@ type KnobName = 'level' | 'blend' | 'mod' | 'drive'
 const layouts = {
   mobile: 345,
   tablet: 748,
-  laptop: 1000
+  laptop: 1024
 }
 
 const knobs: Record<KnobName, ImageRect> = {
