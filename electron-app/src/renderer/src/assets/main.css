@@ -61,6 +61,23 @@ body {
   flex-grow: 1;
 }
 
+.product-display {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+
+.product-display .button-container {
+  margin-bottom: 2rem;
+}
+
+.product-display .product-container {
+  position: relative;
+  flex: 1;
+  overflow: scroll;
+}
+
 code {
   font-weight: 600;
   padding: 3px 5px;
